@@ -7,3 +7,5 @@ Test
            -it \
            --rm \
            martinjohn/rclone-auth
+
+Useful reference for Alpine packages - https://pkgs.alpinelinux.org/packages
