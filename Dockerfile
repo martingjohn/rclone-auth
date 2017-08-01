@@ -14,7 +14,7 @@ RUN set -x \
 
 # Setup password
 WORKDIR /root/.vnc
-#RUN x11vnc -storepasswd ${VNCPASSWD} passwd
+RUN x11vnc -storepasswd ${VNCPASSWD} passwd
 
 # Autostart firefox
 WORKDIR /root
