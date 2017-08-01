@@ -7,7 +7,7 @@ RUN set -x \
         firefox \
         x11vnc \
         xfce4 \
-        xvfb
+        xvfb \
      && rm -rf /var/cache/apk/*
 
 # Setup password
