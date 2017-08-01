@@ -5,9 +5,9 @@ ENV VNCPASSWD="1234"
 #        x11vnc \
 RUN set -x \
     && apk update \
-    && apk search *firefox* \
+    && apk search *x11vnc* \
     && apk --no-cache add \
-        firefox \
+        firefox-esr \
         xfce4 \
         xvfb \
      && rm -rf /var/cache/apk/*
