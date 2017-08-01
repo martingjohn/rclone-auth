@@ -4,11 +4,12 @@ ENV VNCPASSWD="1234"
 
 RUN set -x \
     && apk update \
-    && apk search *vnc* \
     && apk --no-cache add \
         firefox-esr \
         xfce4 \
         xvfb \
+     && apk --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing add \
+        x11vnc \
      && rm -rf /var/cache/apk/*
 
 # Setup password
