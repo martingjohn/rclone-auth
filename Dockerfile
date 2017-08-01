@@ -20,3 +20,5 @@ WORKDIR /root
 RUN echo "firefox" >> .bashrc
 
 ENTRYPOINT ["/bin/ash"]
+
+#cp /etc/X11/xinit/xinitrc ~/.xinitrc ?
