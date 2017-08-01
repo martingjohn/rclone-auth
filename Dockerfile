@@ -2,10 +2,9 @@ FROM martinjohn/rclone:latest
 
 ENV VNCPASSWD="1234"
 
-#        x11vnc \
 RUN set -x \
     && apk update \
-    && apk search *x11vnc* \
+    && apk search *vnc* \
     && apk --no-cache add \
         firefox-esr \
         xfce4 \
