@@ -23,3 +23,4 @@ RUN echo "firefox" >> .bashrc
 ENTRYPOINT ["/bin/ash"]
 
 #cp /etc/X11/xinit/xinitrc ~/.xinitrc ?
+#might need --allow-untrusted on testing repo
