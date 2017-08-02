@@ -10,4 +10,9 @@ Test
            -p 5900:5900 \
            martinjohn/rclone-auth
 
-Useful reference for Alpine packages - https://pkgs.alpinelinux.org/packages
+
+Connect to vnc and run 
+
+    rclone config
+
+In the terminal window
