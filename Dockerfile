@@ -1,6 +1,7 @@
 FROM martinjohn/rclone:latest
 
 ENV VNCPASSWD="1234"
+EXPOSE 5900
 
 RUN set -x \
     && apk update \
@@ -17,9 +18,10 @@ WORKDIR /root/.vnc
 RUN x11vnc -storepasswd ${VNCPASSWD} passwd
 
 # Autostart firefox
-WORKDIR /root
-RUN echo "firefox" >> .bashrc
+#WORKDIR /root
+#RUN echo "firefox" >> .bashrc
 
 ENTRYPOINT ["/bin/ash"]
+CMD ["x11vnc -usepw -create"]
 
 #cp /etc/X11/xinit/xinitrc ~/.xinitrc ?
