@@ -6,7 +6,6 @@ Pass in a config directory for the data volume to persist the rclone.conf
     docker run \
            -it \
            --rm \
-           --cap-add=SYS_ADMIN \
            -v "<config dir>:/data" \
            -p 5900:5900 \
            martinjohn/rclone-auth
