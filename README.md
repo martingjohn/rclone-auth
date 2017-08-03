@@ -1,18 +1,15 @@
 # rclone-auth
 Way to easily create/amend rclone config file with Docker
 
-Test
+Pass in a config directory for the data volume to persist the rclone.conf
 
     docker run \
            -it \
            --rm \
            --cap-add=SYS_ADMIN \
+           -v "<config dir>:/data" \
            -p 5900:5900 \
            martinjohn/rclone-auth
 
 
-Connect to vnc and run 
-
-    rclone config
-
-In the terminal window
+Connect to vnc on 5900 and fill in details of config in the terminal window, switching to firefox for authentication
