@@ -15,6 +15,6 @@ xfce4-panel &
 #Starts firefox on the rclone auth page
 firefox http://127.0.0.1:53682/auth &
 
-#Starts terminal
-xfce4-terminal &
+#Starts terminal and rclone config
+xfce4-terminal -e "rclone config --config '/data/rclone.conf'" &
 wait
