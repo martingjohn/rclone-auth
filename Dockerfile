@@ -1,7 +1,5 @@
 FROM martinjohn/rclone:latest
 
-EXPOSE 5900
-
 RUN set -x \
     && apk update \
     && apk --no-cache add \
@@ -13,8 +11,12 @@ RUN set -x \
         x11vnc \
      && rm -rf /var/cache/apk/*
 
-WORKDIR /root
-ADD start.sh /root
-RUN chmod 755 /root/start.sh
+WORKDIR /docker
+ADD start.sh /docker
+RUN chmod 755 /docker/start.sh
+
+EXPOSE 5900
+VOLUME /data
+
 ENTRYPOINT ["/bin/ash"]
-CMD ["/root/start.sh"]
+CMD ["/docker/start.sh"]
