@@ -1,4 +1,4 @@
-FROM martinjohn/rclone:beta
+FROM martinjohn/rclone:latest
 
 RUN set -x \
     && apk update \
