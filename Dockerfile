@@ -15,6 +15,8 @@ WORKDIR /docker
 ADD start.sh /docker
 RUN chmod 755 /docker/start.sh
 
+ADD xfce4-panel.xml /root/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
+
 EXPOSE 5900
 VOLUME /data
 ENV VNC_RESOLUTION="800x600"
