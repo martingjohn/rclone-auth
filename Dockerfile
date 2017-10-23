@@ -17,6 +17,7 @@ RUN chmod 755 /docker/start.sh
 
 EXPOSE 5900
 VOLUME /data
+ENV VNC_RESOLUTION="800x600"
 
 ENTRYPOINT ["/bin/ash"]
 CMD ["/docker/start.sh"]
